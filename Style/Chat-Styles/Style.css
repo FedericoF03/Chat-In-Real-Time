@@ -1,6 +1,22 @@
-.body {
+/* Tags styles */
+
+body {
     margin: 0;
+    font-family: 'Roboto', sans-serif;
 }
+
+nav {
+    display: flex;
+    height: 100%;
+}
+
+input {
+    background-color: #202C33;
+    border: 0 ;
+    border-radius: 4px;
+}
+
+/*seccion header y conteiner general */
 
 .conteiner__page {
     display: grid;
@@ -10,36 +26,95 @@
                          "aside main";       
 }
 
-.nav__conteiner {
-    display: flex;
-    flex-direction: column;
-}
-
 .header {
     grid-area: header;
-}
-
-.find {
-    grid-area: find;
-}
-
-.aside {
-    grid-area: aside;
-}
-
-.main {
-    grid-area: main;
-}
-
-
-nav {
-    display: flex;
+    background-color: #202C33;
+    height: 10vh;
+    border: 1px solid #1E2930;
 }
 
 .nav {
     display: flex;
-    width:  50%;
-    display: flex;
     width: 50%;
     justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.perfil--width {
+    width: 50%;
+    border-radius: 50%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.nav2 {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.nav2__photo{
+    height: 100%;
+    width: 15%;
+}
+
+.chat__img--width {
+    height: 90%;
+    border-radius: 50%;
+    margin: 2.5% 5%;
+}
+
+.nav2__name {
+    width: 70%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.nav2__icons {
+    margin-left: auto;
+}
+
+/*seccion find*/
+.find {
+    grid-area: find;
+    background-color: #111B21;
+    height: 10vh;
+    border: 1px solid #1E2930;
+}
+
+.aside {
+    grid-area: aside;
+    background-color: #111B21;
+    height: 80vh;
+    border: 1px #1E2930;
+}
+
+.main {
+    grid-area: main;
+    background-color: #111B21;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid #1E2930;
+}
+
+
+
+
+.hora {
+    margin-left: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+
+@font-face { 
+    font-family: Roboto; 
+    src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); 
 }
