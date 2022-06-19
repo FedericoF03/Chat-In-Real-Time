@@ -1,1 +1,45 @@
+.body {
+    margin: 0;
+}
 
+.conteiner__page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header"
+                         "find  main"
+                         "aside main";       
+}
+
+.nav__conteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    grid-area: header;
+}
+
+.find {
+    grid-area: find;
+}
+
+.aside {
+    grid-area: aside;
+}
+
+.main {
+    grid-area: main;
+}
+
+
+nav {
+    display: flex;
+}
+
+.nav {
+    display: flex;
+    width:  50%;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
