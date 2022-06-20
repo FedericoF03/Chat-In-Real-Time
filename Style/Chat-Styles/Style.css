@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
+    color: #FFFFFF;
 }
 
 nav {
@@ -11,7 +12,7 @@ nav {
 }
 
 input {
-    background-color: #202C33;
+    background-color: #2A3942;
     border: 0 ;
     border-radius: 4px;
 }
@@ -30,7 +31,7 @@ input {
     grid-area: header;
     background-color: #202C33;
     height: 10vh;
-    border: 1px solid #1E2930;
+    border: 0.5px solid #29353C;
 }
 
 .nav {
@@ -39,6 +40,7 @@ input {
     justify-content: space-between;
     height: 100%;
     align-items: center;
+    border-right: 0.5px solid #29353C;
 }
 
 .perfil--width {
@@ -46,6 +48,12 @@ input {
     border-radius: 50%;
     margin-left: 5%;
     margin-top: 5%;
+}
+
+.nav__icons {
+    display: flex;
+    width: 20%;
+    justify-content: space-around;
 }
 
 .nav2 {
@@ -81,15 +89,50 @@ input {
 .find {
     grid-area: find;
     background-color: #111B21;
-    height: 10vh;
-    border: 1px solid #1E2930;
+    height: 8vh;
+    border: 0.5px solid #1E2930;
+    display: flex;
+    align-items: center;
 }
+
+.find__box {
+    margin-left: 5%;
+    width: 90%;
+    height: 50%;
+}
+
+.find__icon {
+    background-color: #2A3942;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height: 100%;
+}
+
+.input__size {
+    width: 90%;
+    padding: 1.5% 0% 1.5% 8px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/*seccion aside */
 
 .aside {
     grid-area: aside;
     background-color: #111B21;
-    height: 80vh;
-    border: 1px #1E2930;
+    height: 82vh;
+    border: 0.5px #1E2930;
+}
+
+.chats {
+    height: 15vh;
+    border: 1px #1E2930 solid ;
+}
+
+.chat__img--width2 {
+    height: 80%;
+    border-radius: 50%;
+    margin: 1.5% 5%;
 }
 
 .main {
@@ -102,11 +145,23 @@ input {
     border: 1px solid #1E2930;
 }
 
-
-
-
 .hora {
     margin-left: auto;
+    margin-right: 5%;
+}
+
+.box__text {
+    background-color: #202C33;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.chat__input {
+    width: 70%;
+    height: 55%;
+    font-size: 20px;
 }
 
 .flex {
