@@ -1,0 +1,1 @@
+let work = new Worker("./Code.js")
