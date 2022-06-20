@@ -4,6 +4,8 @@ body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
+    overflow: hidden;
+    font-size: 1rem;
 }
 
 nav {
@@ -15,6 +17,14 @@ input {
     background-color: #2A3942;
     border: 0 ;
     border-radius: 4px;
+    outline-style: none;
+    border-style: none;
+    color: #FFFFFF;
+    padding-left: 5px;
+}
+
+input::placeholder {
+    color: #FFFFFF;
 }
 
 /*seccion header y conteiner general */
@@ -46,8 +56,9 @@ input {
 .perfil--width {
     width: 50%;
     border-radius: 50%;
-    margin-left: 5%;
-    margin-top: 5%;
+    margin-left: 10%;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 .nav__icons {
@@ -71,7 +82,7 @@ input {
 .chat__img--width {
     height: 90%;
     border-radius: 50%;
-    margin: 2.5% 5%;
+    margin: 2.5% 10%;
 }
 
 .nav2__name {
@@ -152,7 +163,7 @@ input {
 
 .box__text {
     background-color: #202C33;
-    height: 10vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -162,6 +173,37 @@ input {
     width: 70%;
     height: 55%;
     font-size: 20px;
+}
+
+.box__chat{
+    height: 100%;
+}
+
+.box__chatsandmessage{
+    height: 80vh;
+}
+.message__box {
+    background-color: #005C4B;
+    min-width: 200px;
+    max-width: 50%;
+    height: 5vh;
+    margin: 10px 5%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message__box__chat {
+    background-color: #202C33;
+    min-width: 200px;
+    max-width: 50%;
+    height: 5vh;
+    margin: 10px 5% 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message {
+    margin: 0;
 }
 
 .flex {
