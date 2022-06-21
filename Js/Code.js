@@ -1,14 +1,23 @@
 'use strict';
 
+//Se piden Id's del index.html //
+
 let link = document.getElementById("linkPrueba");
 let registerConteinerPause = document.getElementById("ContRegPause")
 let registerBoxPause = document.getElementById("ContRegPauseBox")
 let spanPause = document.querySelector("span")
-let ventanaEmerge;
+let ingress = document.getElementById("enviado")
+let usuarioLogin = document.getElementById("usuarioCreator")
+let contraseñaLogin = document.getElementById("contraseñaCreator")
+
+//Creamos mensaje//
+
 let message = document.createElement("SPAN")
 message.classList.add("r__s")
 message.innerHTML = "En espera de que termine de registrarse";
 
+//Control de registro y ventana mediante evento click //
+let ventanaEmerge;
 link.addEventListener("click", ()=>{
     ventanaEmerge = window.open("./Register.html");
         setTimeout( ()=>{
@@ -29,3 +38,24 @@ link.addEventListener("click", ()=>{
         let prueba = setInterval(check, 2200)
 })
 
+//Pedimos abrir una db para leer el usuario //
+
+const IDBRequest = indexedDB.open("Users", 1);
+
+const readUsers = ()=>{
+    const db = IDBRequest.result;
+    const IDBtransaction = db.transaction("usuarios","readonly")
+    const objectStore = IDBtransaction.objectStore("usuarios");
+    const cursor = objectStore.openCursor()
+    
+    cursor.addEventListener("success", ()=>{
+       if (cursor.result.value.Usuario != usuarioLogin.value && cursor.result.value.Contraseña != contraseñaLogin.value) {
+            cursor.result.continue()
+       } else if (cursor.result.value.Usuario == usuarioLogin.value && cursor.result.value.Contraseña == contraseñaLogin.value) { 
+       console.log("Usuario y contraseña correctas")
+       window.open("./Chat.html", "_self")
+       }
+    })
+}
+
+ingress.addEventListener("click", readUsers )
