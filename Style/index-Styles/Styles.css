@@ -1,3 +1,83 @@
+body{
+    margin: 0;
+    background-color: #111B21;
+    font-family: Roboto, sans-serif;
+    color: #FFFFFF;
+}
+
+div {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #202C33;
+    width: 40vw;
+    height: 45vh;
+    padding: 6% 1%;
+    border-radius: 2px;
+    box-shadow: 7px 3px 33px 1px rgb(255 255 255 / 80%);
+    animation: formShadow 8s infinite;
+}
+
+@keyframes formShadow {
+    0% { box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.571);}
+    50% { box-shadow: 0px 0px 10px 1px rgb(23, 183, 84);}
+    100% { box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.571);}
+    
+}
+
+input {
+    max-width: 200px;;
+    margin: 1% auto;
+    background-color: #111B21;
+    border-style: none;
+    border-radius: 5px;
+    padding: 5px 5px;
+    color: #FFFFFF;
+    outline-color: #1b4259;
+}
+
+input[type="submit"] {
+    color: #F0F0F0;
+    padding: 15px 30px;
+    margin: 10px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #111B21;
+    padding: 0.5px 3px;
+    border-radius: 5px;
+}
+
+a:hover, input[type="submit"]:hover {
+    background-color: #1b4259;
+}
+
+.img__box {
+    width: 52px;
+    height: 55px;
+}
+
+@font-face { 
+    font-family: Roboto; 
+    src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); 
+}
+
 .r__p__c {
     width: 100vw;
     height: 100vh;
