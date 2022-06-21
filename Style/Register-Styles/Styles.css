@@ -5,6 +5,10 @@ body{
     color: #FFFFFF;
 }
 
+h1 {
+    margin: 0;
+}
+
 div {
     width: 100vw;
     height: 100vh;
@@ -19,13 +23,14 @@ form {
     justify-content: center;
     align-items: center;
     background-color: #202C33;
-    width: 40vw;
-    height: 45vh;
-    padding: 6% 1%;
+    width: 30vw;
+    min-height: 164px;;
+    padding: 2% 1%;
     border-radius: 2px;
     box-shadow: 7px 3px 33px 1px rgb(255 255 255 / 80%);
     animation: formShadow 8s infinite;
 }
+
 
 @keyframes formShadow {
     0% { box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.571);}
@@ -66,6 +71,19 @@ a {
 
 a:hover, input[type="submit"]:hover {
     background-color: #1b4259;
+}
+
+.i__p {
+    position: relative;
+    width: min-content;
+    height: min-content;
+}
+
+.eyes {
+    position: absolute;
+    width: 13%;
+    height: 50%;
+    left: 151px;
 }
 
 .img__box {
