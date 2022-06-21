@@ -68,6 +68,13 @@ a:hover, input[type="submit"]:hover {
     background-color: #1b4259;
 }
 
+.fix {
+    position: fixed;
+    top: 1px;
+    background-color:#1b4259;
+    border: 2px solid black
+}
+
 .img__box {
     width: 52px;
     height: 55px;
