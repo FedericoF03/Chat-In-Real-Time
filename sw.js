@@ -10,10 +10,9 @@ self.addEventListener("activate", e=>{
 })
 
 self.addEventListener("fetch", ()=> {
-    console.log("llego?")
 })
 
 self.addEventListener("message", e=>{ 
-    e.source.postMessage("e.data")
+    e.source.postMessage(e.data)
 })
  
