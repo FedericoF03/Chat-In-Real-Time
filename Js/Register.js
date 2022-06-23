@@ -9,18 +9,9 @@ const spanPause = document.querySelector("span");
 const parrafoRegister = document.getElementById("parrafoRegister");
 const visibilityPassword = document.querySelector(".eyes");
 
-// Se crea la db o abre en el caso de ya existir //
-const IDBRequest = indexedDB.open("Users", 1)
-IDBRequest.addEventListener("upgradeneeded", ()=>{
-    const db = IDBRequest.result;
-    db.createObjectStore("usuarios", {
-        autoIncrement: true
-    })
-})
-
 // Registro boton funcion agrega los datos a la db //
+const IDBRequest = indexedDB.open("Users", 1);
 registerButton.addEventListener("click", ()=>{
-
     const addUsers = user =>{
         const db = IDBRequest.result;
         const IDBtransaction = db.transaction("usuarios","readwrite")

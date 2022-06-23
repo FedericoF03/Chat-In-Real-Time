@@ -41,6 +41,12 @@ link.addEventListener("click", ()=>{
 //Pedimos abrir una db para leer el usuario //
 
 const IDBRequest = indexedDB.open("Users", 1);
+IDBRequest.addEventListener("upgradeneeded", ()=>{
+    const db = IDBRequest.result;
+    db.createObjectStore("usuarios",{
+        autoIncrement: true
+    })
+})
 
 const readUsers = ()=>{
     const db = IDBRequest.result;
@@ -49,12 +55,13 @@ const readUsers = ()=>{
     const cursor = objectStore.openCursor()
     
     cursor.addEventListener("success", ()=>{
-       if (cursor.result.value.Usuario != usuarioLogin.value && cursor.result.value.Contraseña != contraseñaLogin.value) {
+        if (usuarioLogin.value == "" || contraseñaLogin.value == "") console.log("no se ingreso dato")
+        else if (cursor.result.value.Usuario != usuarioLogin.value && cursor.result.value.Contraseña != contraseñaLogin.value) {
             cursor.result.continue()
-       } else if (cursor.result.value.Usuario == usuarioLogin.value && cursor.result.value.Contraseña == contraseñaLogin.value) { 
-       console.log("Usuario y contraseña correctas")
-       window.open("./Chat.html", "_self")
-       }
+        } else if (cursor.result.value.Usuario == usuarioLogin.value && cursor.result.value.Contraseña == contraseñaLogin.value) { 
+            console.log("Usuario y contraseña correctas")
+            window.open("./Chat.html", "_self")
+        } 
     })
 }
 

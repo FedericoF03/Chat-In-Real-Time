@@ -177,11 +177,12 @@ input::placeholder {
 
 .box__chat{
     height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
-.box__chatsandmessage{
-    height: 80vh;
-}
 .message__box {
     background-color: #005C4B;
     min-width: 200px;
@@ -194,9 +195,9 @@ input::placeholder {
 
 .message__box__chat {
     background-color: #202C33;
-    min-width: 200px;
-    max-width: 50%;
-    height: 5vh;
+    min-width: min-content;
+    max-width: max-content;
+    max-height: max-content;
     margin: 10px 5% 10px auto;
     padding: 10px;
     border-radius: 5px;
@@ -204,6 +205,8 @@ input::placeholder {
 
 .message {
     margin: 0;
+    word-break: break-all;
+    max-width: 500px;
 }
 
 .flex {
