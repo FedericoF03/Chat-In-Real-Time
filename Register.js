@@ -1,18 +1,17 @@
 'use strict';
+
 const inputUser = document.getElementById("username");
 const inputPass = document.getElementById("password");
 const inputEmail = document.getElementById("email");
 const pRegister = document.getElementById("parrafoRegister");
 
-const IDBRequest = indexedDB.open("Accounts", 1);
+export const IDBRequest = indexedDB.open("Accounts", 1);
 IDBRequest.addEventListener("upgradeneeded", ()=>{
     const db = IDBRequest.result;
     db.createObjectStore("account", {
         autoIncrement: true
     });
 })
-
-
 
 document.addEventListener("click", e=>{
     if (e.target.matches("#register__button")) {
@@ -28,9 +27,9 @@ const addObject = objeto=> {
     objectStore.add(objeto);
 }
 
- export const dbTransaction = (method)=>{
+export  const dbTransaction = (method)=>{
         const db = IDBRequest.result;
         const IDBtransaction = db.transaction("account", method);
         const objectStore = IDBtransaction.objectStore("account");
         return objectStore;
-    }
+}
