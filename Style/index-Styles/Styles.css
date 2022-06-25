@@ -60,7 +60,7 @@ a {
     text-decoration: none;
     color: #FFFFFF;
     background-color: #111B21;
-    padding: 0.5px 3px;
+    padding: 10px 3px;
     border-radius: 5px;
 }
 
@@ -73,10 +73,7 @@ a:hover, input[type="submit"]:hover {
     height: 55px;
 }
 
-@font-face { 
-    font-family: Roboto; 
-    src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); 
-}
+
 
 .r__p__c {
     width: 100vw;
@@ -113,11 +110,15 @@ a:hover, input[type="submit"]:hover {
 }
 
 
-.prueba {
+.warning {
     position: fixed;
     bottom: 0px;
+    left: 20%;
     background-color: black;
-    padding-left: auto;
-    padding-right: auto;
-    left: 10%;
+    padding: 20px;
+}
+
+@font-face { 
+    font-family: Roboto; 
+    src: url("chrome-extension://mcgbeeipkmelnpldkobichboakdfaeon/css/Roboto-Regular.ttf"); 
 }
